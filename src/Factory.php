@@ -76,7 +76,7 @@ final class Factory
                 Blade::component(
                     SvgComponent::class,
                     implode('.', array_filter($path + [$file->getFilenameWithoutExtension()])),
-                    $set['prefix'],
+                    $set['prefix']
                 );
             }
         }
@@ -117,7 +117,7 @@ final class Factory
         return trim($this->filesystem->get(sprintf(
             '%s/%s.svg',
             rtrim($path),
-            str_replace('.', '/', $name),
+            str_replace('.', '/', $name)
         )));
     }
 
@@ -159,7 +159,7 @@ final class Factory
         return trim(sprintf(
             '%s %s',
             trim(sprintf('%s %s', $this->defaultClass, $this->sets[$set]['class'] ?? '')),
-            $class,
+            $class
         ));
     }
 }
